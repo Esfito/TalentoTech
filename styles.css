@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #e0e0e0;
+    background-color: #1e1e1e;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+header .logo {
+    height: 50px;
+    margin-right: 1em;
+}
+
+/* Menú Nav */
+nav ul {
+    display: flex;
+    list-style-type: none;
+    background-color: #444;
+    padding: 0.5em;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main section {
+    padding: 2em;
+    margin: 1em 0;
+}
+
+/* Jugadores (Flexbox) */
+.jugadores-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    justify-content: center;
+}
+
+.card {
+    flex: 0 1 calc(20% - 1.5em);
+    background-color: #444;
+    padding: 1em;
+    text-align: center;
+    border: 1px solid #555;
+    border-radius: 8px;
+    max-width: 280px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.card button {
+    margin-top: 0.5em;
+    padding: 0.5em;
+    cursor: pointer;
+    background-color: #666;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 3px;
+}
+
+.card button:hover {
+    background-color: #888;
+}
+
+/* Últimos Partidos (Grid) */
+.partidos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1em;
+}
+
+.partido {
+    background-color: #444;
+    padding: 1em;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
+
+/* Contacto (Formulario) */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    max-width: 400px;
+    margin: auto;
+}
+
+form label {
+    font-weight: bold;
+    color: #ccc;
+}
+
+form input, form textarea {
+    padding: 0.5em;
+    border: 1px solid #555;
+    background-color: #333;
+    color: #e0e0e0;
+    border-radius: 3px;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 1.2em;
+}
+
+form button[type="submit"],
+form button[type="reset"] {
+    padding: 0.7em 1.2em;
+    background-color: #666;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    flex: 1;
+}
+
+form button[type="submit"]:hover,
+form button[type="reset"]:hover {
+    background-color: #888;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+/* Media Queryes */
+
+/* 1000px > font x 0.85 */
+@media (max-width: 1000px) {
+    .card {
+        font-size: 0.85em;
+    }
+}
+
+/* 768px > 2 cards */
+@media (max-width: 768px) {
+    .card {
+        flex: 0 1 calc(50% - 1em);
+    }
+}
+
+/* 480px > 1 cards - nav vertical - 1 column grid - 90%form */
+@media (max-width: 480px) {
+    .card {
+        flex: 0 1 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .partidos-container {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        width: 90%;
+    }
+}
