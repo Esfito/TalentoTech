@@ -26,209 +26,44 @@
 <main>
     <section id="inicio">
         <h2>Bienvenido a "Armá tu propio equipo y jugá"</h2>
-        <p>Seleccioná a tus jugadores favoritos y arma tu equipo ideal. Si no encontrás el jugador que buscás, podés escribirnos un mensaje y lo agregamos.</p>
+        <p>Seleccioná a tus jugadores favoritos y arma tu equipo ideal. Esta es una versión "demo", por lo que la lista de opciones es limitada.</p>
     </section>
 
+<section id="equipo">
+        <h2>Equipo - Jugadores seleccionados</h2>
+        <section id="teamCounter" class="counter">
+            <!-- Mensaje dinámico según cantidad de jugadores en equipo -->
+        </section>
+        <div class="equipo-container">
+            <!-- Este vendría a reemplazar al carrito a los fines de este trabajo práctico -->            
+            <!-- Las cards de jugadores se generan dinámicamente (según las colocadas en el equipo) -->
+        </div>
+
+    </section>
+
+
     <section id="jugadores">
-        <h2>Jugadores</h2>
+        <h2>Jugadores disponibles</h2>
         <div class="jugadores-container">
-            <!-- Cards de jugadores -->
-            <!-- Se cargarán de API en un futuro -->
+            <!-- Usando API TheSportsDB. La versión gratuita para traer los jugadores de un equipo, solo puedo traer los jugadores del Arsenal y no de Argentina, salvo que vaya jugador por jugador -->
+            <!-- Por Jugador: https://www.thesportsdb.com/api/v1/json/3/lookupplayer.php?id=34146370 (Messi)-->
+            <!-- Por equipo: https://www.thesportsdb.com/api/v1/json/3/lookup_all_players.php?id=133604 (Arsenal)-->
 
-            <!-- Podré aprovechar la API que usan acá o será de uso privado? --> 
-            <!-- https://www.transfermarkt.com.ar/detailsuche/spielerdetail/suche/51562787 -->
-
-            <!-- o... Resolver datos de API -->
-            <!-- https://www.thesportsdb.com/api/v1/json/3/lookupplayer.php?id=34146370 -->
-
-            <div class="card" id="jugador1">
-                <!-- https://www.transfermarkt.com.ar/erling-haaland/profil/spieler/418560 -->
-                <img src="img/Erling_Haaland.jpg" alt="Erling Haaland">
-                <h3>Erling Haaland</h3>
-                <p>Posición: Delantero centro</p>
-                <p>Selección: Noruega</p>
-                <p>Altura: 1,95 m</p>
-                <button>Añadir</button>
-                <button>Quitar</button>
-            </div>
-            <div class="card" id="jugador2">
-                <!-- https://www.transfermarkt.com.ar/vinicius-junior/profil/spieler/371998 -->
-                <img src="img/Vinicius_Junior.jpg" alt="Vinicius Junior">
-                <h3>Vinicius Junior</h3>
-                <p>Posición: Extremo izquierdo</p>
-                <p>Selección: Brasil</p>
-                <p>Altura: 1,76 m</p>
-                <button>Añadir</button>
-                <button>Quitar</button>
-            </div>
-            <div class="card" id="jugador3">
-                <!-- https://www.transfermarkt.com.ar/jude-bellingham/profil/spieler/581678 -->
-                <img src="img/Jude_Bellingham.jpg" alt="Jude Bellingham">
-                <h3>Jude Bellingham</h3>
-                <p>Posición: Mediocentro ofensivo</p>
-                <p>Selección: Inglaterra</p>
-                <p>Altura: 1,86 m</p>
-                <button>Añadir</button>
-                <button>Quitar</button>
-            </div>
-            <div class="card" id="jugador4">
-                <!-- https://www.transfermarkt.com.ar/kylian-mbappe/profil/spieler/342229 -->
-                <img src="img/Kylian_Mbappe.jpg" alt="Kylian Mbappé">
-                <h3>Kylian Mbappé</h3>
-                <p>Posición: Delantero centro</p>
-                <p>Selección: Francia</p>
-                <p>Altura: 1,78 m</p>
-                <button>Añadir</button>
-                <button>Quitar</button>
-            </div>            
-            <div class="card" id="jugador5">
-                <!-- https://www.transfermarkt.com.ar/lamine-yamal/profil/spieler/937958 -->
-                <img src="img/Lamine_Yamal.jpg" alt="Lamine Yamal">
-                <h3>Lamine Yamal</h3>
-                <p>Posición: Extremo derecho</p>
-                <p>Selección: España</p>
-                <p>Altura: 1,80 m</p>
-                <button>Añadir</button>
-                <button>Quitar</button>
-            </div>            
-            <div class="card" id="jugador6">
-                <!-- https://www.transfermarkt.com.ar/phil-foden/profil/spieler/406635 -->
-                <img src="img/Phil_Foden.jpg" alt="Phil Foden">
-                <h3>Phil Foden</h3>
-                <p>Posición: Extremo derecho</p>
-                <p>Selección: Inglaterra</p>
-                <p>Altura: 1,71 m</p>
-                <button>Añadir</button>
-                <button>Quitar</button>
-            </div>            
-            <div class="card" id="jugador7">
-                <!-- https://www.transfermarkt.com.ar/bukayo-saka/profil/spieler/433177 -->
-                <img src="img/Bukayo_Saka.jpg" alt="Bukayo Saka">
-                <h3>Bukayo Saka</h3>
-                <p>Posición: Extremo derecho</p>
-                <p>Selección: Inglaterra</p>
-                <p>Altura: 1,78 m</p>
-                <button>Añadir</button>
-                <button>Quitar</button>
-            </div>            
-            <div class="card" id="jugador8">
-                <!-- https://www.transfermarkt.com.ar/florian-wirtz/profil/spieler/598577 -->
-                <img src="img/Florian_Wirtz.jpg" alt="Florian Wirtz">
-                <h3>Florian Wirtz</h3>
-                <p>Posición: Mediocentro ofensivo</p>
-                <p>Selección: Alemania</p>
-                <p>Altura: 1,77 m</p>
-                <button>Añadir</button>
-                <button>Quitar</button>
-            </div>            
-            <div class="card" id="jugador9">
-                <!-- https://www.transfermarkt.com.ar/jamal-musiala/profil/spieler/580195 -->
-                <img src="img/Jamal_Musiala.jpg" alt="Jamal Musiala">
-                <h3>Jamal Musiala</h3>
-                <p>Posición: Mediocentro ofensivo</p>
-                <p>Selección: Alemania</p>
-                <p>Altura: 1,84 m</p>
-                <button>Añadir</button>
-                <button>Quitar</button>
-            </div>            
-            <div class="card" id="jugador10">
-                <!-- https://www.transfermarkt.com.ar/federico-valverde/profil/spieler/369081 -->
-                <img src="img/Federico_Valverde.jpg" alt="Federico Valverde">
-                <h3>Federico Valverde</h3>
-                <p>Posición: Mediocentro</p>
-                <p>Selección: Uruguay</p>
-                <p>Altura: 1,82 m</p>
-                <button>Añadir</button>
-                <button>Quitar</button>
-            </div>            
-            <div class="card" id="jugador11">
-                <!-- https://www.transfermarkt.com.ar/harry-kane/profil/spieler/132098 -->
-                <img src="img/Harry_Kane.jpg" alt="Harry Kane">
-                <h3>Harry Kane</h3>
-                <p>Posición: Delantero centro</p>
-                <p>Selección: Inglaterra</p>
-                <p>Altura: 1,88 m</p>
-                <button>Añadir</button>
-                <button>Quitar</button>
-            </div>            
-            <div class="card" id="jugador12">
-                <!-- https://www.transfermarkt.com.ar/khvicha-kvaratskhelia/profil/spieler/502670 -->
-                <img src="img/Khvicha_Kvaratskhelia.jpg" alt="Khvicha Kvaratskhelia">
-                <h3>Khvicha Kvaratskhelia</h3>
-                <p>Posición: Extremo izquierdo</p>
-                <p>Selección: Georgia</p>
-                <p>Altura: 1,83 m</p>
-                <button>Añadir</button>
-                <button>Quitar</button>
-            </div>            
-            <div class="card" id="jugador13">
-                <!-- https://www.transfermarkt.com.ar/declan-rice/profil/spieler/357662 -->
-                <img src="img/Declan_Rice.jpg" alt="Declan Rice">
-                <h3>Declan Rice</h3>
-                <p>Posición: Pivote</p>
-                <p>Selección: Inglaterra</p>
-                <p>Altura: 1,88 m</p>
-                <button>Añadir</button>
-                <button>Quitar</button>
-            </div>            
-            <div class="card" id="jugador14">
-                <!-- https://www.transfermarkt.com.ar/william-saliba/profil/spieler/495666 -->
-                <img src="img/William_Saliba.jpg" alt="William Saliba">
-                <h3>William Saliba</h3>
-                <p>Posición: Defensa central</p>
-                <p>Selección: Francia</p>
-                <p>Altura: 1,92 m</p>
-                <button>Añadir</button>
-                <button>Quitar</button>
-            </div>            
-            <div class="card" id="jugador15">
-                <!-- https://www.transfermarkt.com.ar/eduardo-camavinga/profil/spieler/640428 -->
-                <img src="img/Eduardo_Camavinga.jpg" alt="Eduardo Camavinga">
-                <h3>Eduardo Camavinga</h3>
-                <p>Posición: Mediocentro</p>
-                <p>Selección: Francia</p>
-                <p>Altura: 1,82 m</p>
-                <button>Añadir</button>
-                <button>Quitar</button>
-            </div>                        
-            <div class="card" id="jugador16">
-                <!-- https://www.transfermarkt.com.ar/lautaro-martinez/profil/spieler/406625 -->
-                <img src="img/Lautaro_Martinez.jpg" alt="Lautaro Martínez">
-                <h3>Lautaro Martínez</h3>
-                <p>Posición: Delantero centro</p>
-                <p>Selección: Argentina</p>
-                <p>Altura: 1,74 m</p>
-                <button>Añadir</button>
-                <button>Quitar</button>
-            </div>
+            <!-- Las cards de jugadores se generan dinámicamente -->
+            <section id="loading" style="display: none;">
+                <p>Importando datos de la API... tenga paciencia.</p>
+            </section>
         </div>
     </section>
 
+
+
     <section id="partidos">
-        <!-- Resolver usar API para obtener datos -->
-        <!-- https://www.thesportsdb.com/api/v1/json/3/eventsseason.php?id=4429&s=2024-2025 -->
-        <h2>Últimos Partidos</h2>
+        <!-- Últimos 5 partidos obtenidos de la API para el mismo equipo que tenemos los jugadores -->
+        <!-- https://www.thesportsdb.com/api/v1/json/3/eventslast.php?id=133604 -->
+        <h2>Últimos 5 Partidos</h2>
         <div class="partidos-container">
-            <div class="partido">
-                <h3>Equipo 1 vs Equipo 2</h3>
-                <p>Equipo 1 ganó por 3-1. Jugado en Buenos Aires, el 10 de noviembre. Clima soleado.</p>
-            </div>
-            <div class="partido">
-                <h3>Equipo 3 vs Equipo 4</h3>
-                <p>Empate 2-2. Jugado en Rosario, el 12 de noviembre. Clima nublado.</p>
-            </div>
-            <div class="partido">
-                <h3>Equipo 5 vs Equipo 6</h3>
-                <p>Equipo 6 ganó 1-0. Jugado en Córdoba, el 15 de noviembre. Clima lluvioso.</p>
-            </div>
-            <div class="partido">
-                <h3>Equipo 7 vs Equipo 8</h3>
-                <p>Equipo 8 ganó 4-3. Jugado en Mendoza, el 20 de noviembre. Clima soleado.</p>
-            </div>
-            <div class="partido">
-                <h3>Equipo 9 vs Equipo 10</h3>
-                <p>Equipo 9 ganó 2-0. Jugado en Mar del Plata, el 25 de noviembre. Clima ventoso.</p>
-            </div>
+           <!-- Las cards de partidos se generan dinámicamente -->
         </div>
     </section>
 
@@ -256,5 +91,6 @@
     <p>Curso Talento Tech - Gobierno de la Ciudad de Buenos Aires</p>
 </footer>
 
+<script src="scripts.js"></script>
 </body>
 </html>
