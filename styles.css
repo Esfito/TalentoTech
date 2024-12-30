@@ -51,11 +51,16 @@ main section {
 }
 
 /* Jugadores (Flexbox) */
-.jugadores-container {
+.jugadores-container, .equipo-container {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5em;
     justify-content: center;
+}
+
+.counter {
+    padding: 0;
+    margin: 0;
 }
 
 .card {
@@ -87,6 +92,14 @@ main section {
 .card button:hover {
     background-color: #888;
 }
+
+/* Estilo para cuando el botón está deshabilitado */
+.card button:disabled {
+    cursor: not-allowed; /* Cursor de símbolo bloqueado */
+    background-color: #ccc; /* Puedes cambiar el color para mostrar que está deshabilitado */
+    color: #888; /* Puedes cambiar el color del texto también */
+}
+
 
 /* Últimos Partidos (Grid) */
 .partidos-container {
